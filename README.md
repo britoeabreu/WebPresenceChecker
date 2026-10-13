@@ -21,7 +21,7 @@ Resilience features
 * 401/403 ("blocked") responses are reported separately and, by default, counted as "found" for domain/subdomain checks (the host exists).
 * Redirect-to-homepage detection for pages (typical soft 404).
 * Optional soft-404 detection (--soft404 text|full) for pages that answer "200" although the content is missing: 
-    (a) <title> and first <h1> are searched for "not found" wording in 12 languages (the matched phrase is written to Notes);
+    (a) \<title> and first \<h1> are searched for "not found" wording in 12 languages (the matched phrase is written to Notes);
     (b) in "full" mode the program also requests a random non-existent address on the same site and compares the answer with the page: same final address, same content or same title and size reveal a site that serves error pages as 200.
 * Per-host politeness delay, thread pool, in-memory de-duplication of domain/subdomain/page checks.
 * Checkpointing to a JSONL file: an interrupted run (Ctrl-C, crash, network outage) resumes where it stopped. Output is written atomically.
